@@ -1,6 +1,6 @@
 # Version 1.0.0
 
-#Support:
+# Support:
 
 multiaccount for windows and for linux using firefox.
 
