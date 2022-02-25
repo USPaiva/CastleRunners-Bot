@@ -23,7 +23,7 @@ banner = """
 #*******************************************************************************************#
 ---> Press CTRL+C to kill the bot or send /stop on Telegram.
 ---> Some configs can be found in the /config/config.yaml file.
----> futures updates can be found in the https://github.com/carecabrilhante/bombcrypto-bot
+---> futures updates can be found in the https://github.com/carecabrilhante/CastleRunners-Bot
 ============================================================================================
 """
 
@@ -787,7 +787,7 @@ def randomMouseMovement():
 
 def checkUpdates():
     data = requests.get(
-        'https://raw.githubusercontent.com/carecabrilhante/bombcrypto-bcbot/main/config/version.yaml')
+        'https://raw.githubusercontent.com/carecabrilhante/CastleRunners-Bot/main/config/version.yaml')
     try:
         streamVersionGithub = yaml.safe_load(data.text)
         version = streamVersionGithub['version']
