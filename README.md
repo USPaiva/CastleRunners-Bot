@@ -1,28 +1,20 @@
-# Version 1.9.0:
-what is new?
+# Version 1.0.0
 
-Update for new images.
+#Support:
 
-6 new commands for telegram: /refresh ; /Pause ; /heroes ; /allRest ; /allWork ; /restart .
+multiaccount for windows and for linux using firefox.
 
-beta version of multiaccount for windows.
+# CastleRunners-Bot
 
-beta version of multiaccount for linux Ubuntu using firefox, if you want use other browser you need to change the images.
+This is a python bot to automate Castle Runners game.
 
-unified the all for only one index.py
-
-# BombCrypto BCBOT
-This bot is a fork of the old version of the bts22 bot.
-
-This is a python bot to automate BombCrypto game.
-
-Logs in to the game, reconnects when needed, closes error warnings, sends heroes to work or home automatically, has Telegram integration and lets you know by message or call if the farm stop.
+Logs in to the game, reconnects when needed, closes error warnings, sends heroes to work automatically, has Telegram integration and lets you know by message.
 
 It is fully open source and free, compatible with Windows and Ubuntu.
 
 
 ## 🎁 Donation:
-### BUSD/BCOIN (BEP20): 0x614247F846fbB18F9B25FebA48357e3336a9cDD0
+### BUSD/BNB (BEP20): 0x614247F846fbB18F9B25FebA48357e3336a9cDD0
 
 ``` 
 - 27/Dec/21
@@ -31,9 +23,3 @@ It is fully open source and free, compatible with Windows and Ubuntu.
  |
 $0
 ```
-
-
-## Credits:
-[mpcabete](https://github.com/mpcabete/bombcrypto-bot)  
-[vin350](https://github.com/vin350/bombcrypto-bot)  
-[afkapp](https://github.com/afkapp/bombcrypto-bcbot) 
