@@ -105,10 +105,10 @@
   # Valor padrão: 6
   scroll_attempts: 6
   # [en_US]
-  # Default value: true
+  # Default value: false
   # [pt_BR]
-  # Valor padrão: true
-  use_click_and_drag_instead_of_scroll: true
+  # Valor padrão: false
+  use_click_and_drag_instead_of_scroll: false
   # [en_US]
   # Default value: 200
   # [pt_BR]
