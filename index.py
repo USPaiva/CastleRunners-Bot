@@ -683,40 +683,41 @@ def getMoreHeroes():
     logger('Search for heroes to work', emoji='🏢')
 
     goToHeroes()
+    clickButton(allwork)
+    # if streamConfig['select_heroes_mode'] == "full":
+        # logger('Sending heroes with full stamina bar to work!', emoji='⚒️')
+    # elif streamConfig['select_heroes_mode'] == "green":
+        # logger('Sending heroes with green stamina bar to work!', emoji='⚒️')
+    # else:
+        # logger('Sending all heroes to work!', emoji='⚒️')
 
-    if streamConfig['select_heroes_mode'] == "full":
-        logger('Sending heroes with full stamina bar to work!', emoji='⚒️')
-    elif streamConfig['select_heroes_mode'] == "green":
-        logger('Sending heroes with green stamina bar to work!', emoji='⚒️')
-    else:
-        logger('Sending all heroes to work!', emoji='⚒️')
+    # buttonsClicked = 0
+    # heroes_clicked = 0
+    # empty_scrolls_attempts = streamConfig['scroll_attempts']
+    # next_refresh_heroes = random.uniform(
+        # configTimeIntervals['send_heroes_for_work'][0], configTimeIntervals['send_heroes_for_work'][1])
 
-    buttonsClicked = 0
-    heroes_clicked = 0
-    empty_scrolls_attempts = streamConfig['scroll_attempts']
-    next_refresh_heroes = random.uniform(
-        configTimeIntervals['send_heroes_for_work'][0], configTimeIntervals['send_heroes_for_work'][1])
+    # while(empty_scrolls_attempts > 0):
+        # if streamConfig['select_heroes_mode'] == 'full':
+            # buttonsClicked = clickFullBarButtons()
+            # if buttonsClicked is not None:
+                # heroes_clicked += buttonsClicked
+        # elif streamConfig['select_heroes_mode'] == 'green':
+            # buttonsClicked = clickGreenBarButtons()
+            # if buttonsClicked is not None:
+                # heroes_clicked += buttonsClicked
+        # else:
+            # buttonsClicked = clickButtons()
+            # if buttonsClicked is not None:
+                # heroes_clicked += buttonsClicked
 
-    while(empty_scrolls_attempts > 0):
-        if streamConfig['select_heroes_mode'] == 'full':
-            buttonsClicked = clickFullBarButtons()
-            if buttonsClicked is not None:
-                heroes_clicked += buttonsClicked
-        elif streamConfig['select_heroes_mode'] == 'green':
-            buttonsClicked = clickGreenBarButtons()
-            if buttonsClicked is not None:
-                heroes_clicked += buttonsClicked
-        else:
-            buttonsClicked = clickButtons()
-            if buttonsClicked is not None:
-                heroes_clicked += buttonsClicked
-
-        if buttonsClicked == 0 or buttonsClicked is None:
-            empty_scrolls_attempts = empty_scrolls_attempts - 1
-            scroll()
-        sleep(1, 3)
-    logger('{} total heroes sent since the bot started'.format(
-        heroes_clicked_total), telegram=True, emoji='🦸')
+        # if buttonsClicked == 0 or buttonsClicked is None:
+            # empty_scrolls_attempts = empty_scrolls_attempts - 1
+            # scroll()
+        # sleep(1, 3)
+    # logger('{} total heroes sent since the bot started'.format(
+        # heroes_clicked_total), telegram=True, emoji='🦸')
+    logger('All working report sent', telegram=True, emoji='🦸')
     clickButton(x_button_img)
 
 def checkLogout():
@@ -787,7 +788,7 @@ def randomMouseMovement():
 
 def checkUpdates():
     data = requests.get(
-        'https://raw.githubusercontent.com/carecabrilhante/CastleRunners-Bot/main/config/version.yaml')
+        'https://raw.githubusercontent.com/carecabrilhante/bombcrypto-bcbot/main/config/version.yaml')
     try:
         streamVersionGithub = yaml.safe_load(data.text)
         version = streamVersionGithub['version']
