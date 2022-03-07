@@ -788,7 +788,7 @@ def randomMouseMovement():
 
 def checkUpdates():
     data = requests.get(
-        'https://raw.githubusercontent.com/carecabrilhante/bombcrypto-bcbot/main/config/version.yaml')
+        'https://raw.githubusercontent.com/carecabrilhante/CastleRunners-Bot/main/config/version.yaml')
     try:
         streamVersionGithub = yaml.safe_load(data.text)
         version = streamVersionGithub['version']
