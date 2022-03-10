@@ -48,9 +48,9 @@
   # [pt_BR] O quão confiante o bot precisa estar para clicar nos botões (valores entre 0 e 1. 0 é o valor mínimo, 1 é o valor máximo)
   threshold:
     # [en_US]
-    # Default value: 0.75
+    # Default value: 0.8
     # [pt_BR]
-    # Valor padrão: 0.75
+    # Valor padrão: 0.8
     default: 0.8
     # [en_US]
     # Default value: 0.5
