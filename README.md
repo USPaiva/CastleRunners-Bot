@@ -1,5 +1,5 @@
 # Version 1.0.0
-
+ NOW IS WORKING
 # Support:
 
 multiaccount for windows and for linux using firefox.
