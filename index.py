@@ -582,6 +582,9 @@ def currentScreen():
     elif positions(character_indicator) is not False:
         # sys.stdout.write("\ncharacter. ")
         return "character"
+    elif positions(new_map_btn_img) is not False:
+        # sys.stdout.write("\ncharacter. ")
+        return "new_map"
     else:
         # sys.stdout.write("\nUnknown. ")
         return "unknown"
@@ -765,12 +768,9 @@ def waitForImage(imgs, timeout=30, threshold=0.5, multiple=False):
 
 
 def clickNewMap():
+    clickButton(new_map_btn_img)
     logger('New map', emoji='🗺️')
     sleep(1, 2)
-    sleep(2, 3)
-    sendMapReport()
-    sleep(3, 5)
-    sendCoinReport()
 
 
 def sleep(min, max):
@@ -1026,10 +1026,10 @@ def process():
                 last["heroes"] = now
                 getMoreHeroes()
                 
-            if currentScreen() == "thunt":
+            if currentScreen() == "new_map":
                 if clickButton(new_map_btn_img):
                     last["new_map"] = now
-                    clickNewMap()
+                    #clickNewMap()
 
             if currentScreen() == "character":
                 clickButton(x_button_img)
