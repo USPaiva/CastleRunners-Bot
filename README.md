@@ -1,5 +1,5 @@
-# Version 1.0.0
- NOW IS WORKING
+# Version 1.1.0
+ NOW send the first 15 heroes with more stamina
 # Support:
 
 multiaccount for windows and for linux using firefox.
