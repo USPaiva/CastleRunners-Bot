@@ -121,6 +121,8 @@ allrest = cv2.imread('./images/targets/all_rest.png')
 common = cv2.imread('./images/targets/common.png')
 rest = cv2.imread('./images/targets/go-rest.png')
 stop = cv2.imread('./images/targets/stop.png')
+seta = cv2.imread('./images/targets/seta.png')
+stamina = cv2.imread('./images/targets/stamina.png')
 #########################################################
 select_guia = cv2.imread('./images/targets/select_guia.png')
 menu_de_guias = cv2.imread('./images/targets/menu_de_guias.png')
@@ -662,22 +664,6 @@ def login():
 
         login()
 
-    #handleError()
-
-
-#def handleError():
-#    if positions(error_img, configThreshold['error']) is not False:
-#        sendTelegramPrint()
-#        logger('Error detected, trying to resolve', telegram=True, emoji='💥')
-#        clickButton(ok_btn_img)
-#        logger('Refreshing page', telegram=True, emoji='🔃')
-#        # pyautogui.hotkey('ctrl', 'f5')
-#        pyautogui.hotkey('ctrl', 'shift', 'r')
-#        waitForImage(connect_wallet_btn_img)
-#        login()
-#    else:
-#        return False
-
 
 def getMoreHeroes():
     global next_refresh_heroes
@@ -686,40 +672,9 @@ def getMoreHeroes():
     logger('Search for heroes to work', emoji='🏢')
 
     goToHeroes()
+    clickButton(seta)
+    clickButton(stamina)
     clickButton(allwork)
-    # if streamConfig['select_heroes_mode'] == "full":
-        # logger('Sending heroes with full stamina bar to work!', emoji='⚒️')
-    # elif streamConfig['select_heroes_mode'] == "green":
-        # logger('Sending heroes with green stamina bar to work!', emoji='⚒️')
-    # else:
-        # logger('Sending all heroes to work!', emoji='⚒️')
-
-    # buttonsClicked = 0
-    # heroes_clicked = 0
-    # empty_scrolls_attempts = streamConfig['scroll_attempts']
-    # next_refresh_heroes = random.uniform(
-        # configTimeIntervals['send_heroes_for_work'][0], configTimeIntervals['send_heroes_for_work'][1])
-
-    # while(empty_scrolls_attempts > 0):
-        # if streamConfig['select_heroes_mode'] == 'full':
-            # buttonsClicked = clickFullBarButtons()
-            # if buttonsClicked is not None:
-                # heroes_clicked += buttonsClicked
-        # elif streamConfig['select_heroes_mode'] == 'green':
-            # buttonsClicked = clickGreenBarButtons()
-            # if buttonsClicked is not None:
-                # heroes_clicked += buttonsClicked
-        # else:
-            # buttonsClicked = clickButtons()
-            # if buttonsClicked is not None:
-                # heroes_clicked += buttonsClicked
-
-        # if buttonsClicked == 0 or buttonsClicked is None:
-            # empty_scrolls_attempts = empty_scrolls_attempts - 1
-            # scroll()
-        # sleep(1, 3)
-    # logger('{} total heroes sent since the bot started'.format(
-        # heroes_clicked_total), telegram=True, emoji='🦸')
     logger('All working report sent', telegram=True, emoji='🦸')
     clickButton(x_button_img)
 
@@ -765,12 +720,6 @@ def waitForImage(imgs, timeout=30, threshold=0.5, multiple=False):
                     return False
                 continue
             return True
-
-
-def clickNewMap():
-    clickButton(new_map_btn_img)
-    logger('New map', emoji='🗺️')
-    sleep(1, 2)
 
 
 def sleep(min, max):
