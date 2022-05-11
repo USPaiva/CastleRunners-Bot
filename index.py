@@ -23,7 +23,7 @@ banner = """
 #*******************************************************************************************#
 ---> Press CTRL+C to kill the bot or send /stop on Telegram.
 ---> Some configs can be found in the /config/config.yaml file.
----> futures updates can be found in the https://github.com/carecabrilhante/CastleRunners-Bot
+---> futures updates can be found in the https://github.com/USPaiva/CastleRunners-Bot
 ============================================================================================
 """
 
