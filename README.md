@@ -8,7 +8,7 @@ multiaccount for windows and for linux using firefox.
 
 This is a python bot to automate Castle Runners game.
 
-Logs in to the game, reconnects when needed, closes error warnings, sends heroes to work automatically, has Telegram integration and lets you know by message.
+Login to the game, reconnects when needed, closes error warnings, sends heroes to work automatically, has Telegram integration and lets you know by message.
 
 It is fully open source and free, compatible with Windows and Ubuntu.
 
